@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { CardGroup, Carousel, Col, Container, Row } from 'react-bootstrap';
+import { CardGroup, Col, Container, Row } from 'react-bootstrap';
+import useServices from '../../Hooks/useServices';
 import img from '../../images/Person.png'
-import img1 from '../../images/slider-1.jpg'
-import img2 from '../../images/slider-2.jpg'
-import img3 from '../../images/slider-3.jpg'
 import Service from '../Service/Service';
 
 const Home = () => {
-    const [services, setServices] = useState([]);
+    const [services] = useServices();
     const homeSectionService = services.filter((serv, indx) => indx <= 3);
-    useEffect(() => {
-        fetch('./fakeData.JSON')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setServices(data);
-            });
-    }, [])
+
     return (
         <Container style={{ minHeight: '80vh' }} >
             <div className="bg-secondary rounded-3 p-5 my-3 text-white">
@@ -40,7 +31,10 @@ const Home = () => {
                 <Col xs={12} md={7}>
                     <CardGroup>
                         <Row xs={1} md={1} className="g-4">
-                            {homeSectionService.map(service => <Service service={service}></Service>)}
+                            {homeSectionService.map((service, idx) => <Service
+                                key={idx}
+                                service={service}
+                            ></Service>)}
                         </Row>
                     </CardGroup>
                 </Col>
