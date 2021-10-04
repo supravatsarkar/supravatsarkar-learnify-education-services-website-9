@@ -2,8 +2,8 @@ import React from 'react';
 
 const Services = () => {
     return (
-        <div>
-            <h2>This is Servivices</h2>
+        <div style={{ minHeight: '80vh' }}>
+
         </div>
     );
 };
