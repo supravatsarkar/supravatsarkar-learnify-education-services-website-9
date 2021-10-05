@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { CardGroup, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useServices from '../../Hooks/useServices';
 import img from '../../images/Person.png'
-import Service from '../Service/Service';
+import ServiceHome from '../ServiceHome/ServiceHome';
 
 const Home = () => {
     const [services] = useServices();
@@ -10,12 +11,12 @@ const Home = () => {
 
     return (
         <Container style={{ minHeight: '80vh' }} >
-            <div className="bg-secondary rounded-3 p-5 my-3 text-white">
+            <div className="bg-success rounded-3 p-5 my-3 text-white">
                 <h2>Learn Adobe CC with our Masterclass</h2>
                 <p>
                     In this Adobe CC Masterclass, you will learn Photoshop, Illustrator, Adobe XD, InDesign & more. Register now.
                 </p>
-                <button type="button" className="btn btn-primary">Register Now</button>
+                <button type="button" className="btn btn-outline-light">Register Now</button>
             </div>
             <Row className="my-3 ">
                 <Col xs={12} md={5}>
@@ -28,13 +29,19 @@ const Home = () => {
                     </div>
                 </Col>
 
-                <Col xs={12} md={7}>
-                    <CardGroup>
+                <Col xs={12} md={7} className="shadow p-2">
+                    <div className="d-flex justify-content-between">
+                        <h4 className="text-success">Top Services 2021</h4>
+                        <Link to="/services">
+                            <button type="button" class="btn btn-success">View All</button>
+                        </Link>
+                    </div>
+                    <CardGroup className="my-2">
                         <Row xs={1} md={1} className="g-4">
-                            {homeSectionService.map((service, idx) => <Service
+                            {homeSectionService.map((service, idx) => <ServiceHome
                                 key={idx}
                                 service={service}
-                            ></Service>)}
+                            ></ServiceHome>)}
                         </Row>
                     </CardGroup>
                 </Col>

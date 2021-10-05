@@ -8,7 +8,7 @@ const Services = () => {
     return (
         <Container style={{ minHeight: '80vh' }}>
 
-            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-2  row-cols-lg-3 g-4 my-3">
                 {services.map((service, ind) => <ServiceDes
                     key={ind}
                     service={service}
