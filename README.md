@@ -1,3 +1,12 @@
+# Wellcome to Learnify
+1. Learnify is a Technical skill traning website.
+2. Here you can buy and learn any thing related to IT sector
+3. Home page is a default page here Learnify 4 course show.
+4. Full services load on to service page from fake json file.
+5. About page show Leranify about.
+6. Blog page show IT related blogs, artical which load from an another fake json file.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
