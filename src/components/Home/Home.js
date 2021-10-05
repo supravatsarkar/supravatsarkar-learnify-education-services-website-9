@@ -47,7 +47,7 @@ const Home = () => {
                     <div className=" p-5 rounded-3">
                         <img className="w-50" src={img} alt="" />
                         <p className="fs-3 text-dark">
-                            I love to learn new things and skilify has help me a lot to learn more new things and new courses.
+                            I love to learn new things and Learnify has help me a lot to learn more new things and new courses.
                         </p>
                         <p className="text-dark">Sruti Jahan</p>
                     </div>
