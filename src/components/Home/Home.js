@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <Container style={{ minHeight: '80vh' }} >
-            <div className="bg-success rounded-3 p-5 my-3 text-white">
+            <div className="bg-success rounded-3 p-5 my-3 text-white shadow">
                 <h2>Learn Adobe CC with our Masterclass</h2>
                 <p>
                     In this Adobe CC Masterclass, you will learn Photoshop, Illustrator, Adobe XD, InDesign & more. Register now.
@@ -20,12 +20,12 @@ const Home = () => {
             </div>
             <Row className="my-3 ">
                 <Col xs={12} md={5}>
-                    <div className="bg-dark p-5 rounded-3">
+                    <div className="bg-success p-5 rounded-3">
                         <img className="w-50" src={img} alt="" />
                         <p className="fs-3 text-white">
                             I love to learn new things and skilify has help me a lot to learn more new things and new courses.
                         </p>
-                        <p className="text-muted">Sruti Jahan</p>
+                        <p className="text-white">Sruti Jahan</p>
                     </div>
                 </Col>
 
