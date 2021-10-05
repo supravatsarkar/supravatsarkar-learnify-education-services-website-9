@@ -1,9 +1,11 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ServiceDes = props => {
-    const { name, price, img, duration, rating } = props.service;
+    const { id, name, price, img, duration, rating } = props.service;
+
     return (
         <div className="col">
             <div className="card h-100 shadow rounded-3">

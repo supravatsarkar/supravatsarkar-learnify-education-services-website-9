@@ -57,7 +57,7 @@ const Home = () => {
                     <div className="d-flex justify-content-between">
                         <h4 className="text-success">Top Services 2021</h4>
                         <Link to="/services">
-                            <button type="button" class="btn btn-success">View All</button>
+                            <button type="button" className="btn btn-success">View All</button>
                         </Link>
                     </div>
                     <CardGroup className="my-2">

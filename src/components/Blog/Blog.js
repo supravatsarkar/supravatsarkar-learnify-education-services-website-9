@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
+import SingleBlog from './SingleBlog/SingleBlog';
 
 const Blog = () => {
-    return (
-        <div style={{ minHeight: '80vh' }}>
-            <h2 >This is Blog</h2>
+    const [blogs, setBlogs] = useState([]);
 
-        </div>
+    useEffect(() => {
+        fetch('./fakeBlog.json')
+            .then(res => res.json())
+            .then(data => {
+                setBlogs(data);
+                console.log(data);
+            });
+    }, [])
+    return (
+        <Container style={{ minHeight: '80vh' }}>
+
+            <div className="my-3">
+                {blogs.map((blog, idx) => <SingleBlog
+                    key={idx}
+                    blog={blog}
+                ></SingleBlog>)}
+            </div>
+        </Container>
     );
 };
 
